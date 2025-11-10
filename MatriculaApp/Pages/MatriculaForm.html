@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Matrícula</title>
+</head>
+<body>
+    <h2>Formulario de Matrícula</h2>
+    <form method="post" action="/Matricula/Guardar">
+        <label>Nombre:</label><br>
+        <input type="text" name="Nombre" required><br><br>
+
+        <label>Documento:</label><br>
+        <input type="text" name="Documento" required><br><br>
+
+        <label>Curso:</label><br>
+        <input type="text" name="Curso" required><br><br>
+
+        <label>Edad:</label><br>
+        <input type="number" name="Edad" required><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="Email" required><br><br>
+
+        <button type="submit">Guardar Matrícula</button>
+    </form>
+</body>
+</html>
