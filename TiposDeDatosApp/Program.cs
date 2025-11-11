@@ -6,7 +6,9 @@ namespace TiposDeDatosApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Creamos una instancia del objeto Estudiante.
+            Estudiante alumno = new Estudiante();
+            alumno.GetInfoEstudiante();
         }
     }
 }
