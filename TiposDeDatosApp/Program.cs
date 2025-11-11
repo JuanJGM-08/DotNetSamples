@@ -14,12 +14,39 @@ namespace TiposDeDatosApp
             Estudiante aprendiz = new Estudiante(98647, "Luis Armando", "Sanchez Perez","Calle con carera y numero","yosisoy@elmejor.com",31200000,fnac,fing);
             Console.WriteLine(Estudiante.GetInfoEstudiante(alumno));
             Console.WriteLine(Estudiante.GetInfoEstudiante(aprendiz));
-            Estudiante[] misalumnos = [
+            Estudiante[] misalumnos = {
+                new Estudiante(98648, "Luis Federico", "Sanchez Perez","Calle con carera y numero","yosisoy@elmejor.com",31200000,fnac,fing),
+                new Estudiante(98649, "Luis Alfonso", "Sanchez Perez","Calle con carera y numero","yosisoy@elmejor.com",31200000,fnac,fing),
+                new Estudiante(98648, "Luis Federico", "Sanchez Perez","Calle con carera y numero","yosisoy@elmejor.com",31200000,fnac,fing),
+                new Estudiante(98649, "Luis Alfonso", "Sanchez Perez","Calle con carera y numero","yosisoy@elmejor.com",31200000,fnac,fing),
                 new Estudiante(98648, "Luis Federico", "Sanchez Perez","Calle con carera y numero","yosisoy@elmejor.com",31200000,fnac,fing),
                 new Estudiante(98649, "Luis Alfonso", "Sanchez Perez","Calle con carera y numero","yosisoy@elmejor.com",31200000,fnac,fing)
-            ];
-            Console.WriteLine(Estudiante.GetInfoEstudiante(misalumnos[0]));
-            Console.WriteLine(Estudiante.GetInfoEstudiante(misalumnos[1]));
+            };
+            foreach (Estudiante e in misalumnos)
+            {
+                Console.WriteLine("--------------------------------");
+                Console.WriteLine(Estudiante.GetInfoEstudiante(e));
+            }
+
+            Docente[] misDocentes =
+           {
+                new Docente(98648, "Luis Federico", "Sanchez Perez","Calle con carera y numero","yosisoy@elmejor.com",31200000,fnac,fing),
+               new Docente(98648, "Luis Federico", "Sanchez Perez","Calle con carera y numero","yosisoy@elmejor.com",31200000,fnac,fing),
+               new Docente(98648, "Luis Federico", "Sanchez Perez","Calle con carera y numero","yosisoy@elmejor.com",31200000,fnac,fing),
+               new Docente(98648, "Luis Federico", "Sanchez Perez","Calle con carera y numero","yosisoy@elmejor.com",31200000,fnac,fing),
+               new Docente(98648, "Luis Federico", "Sanchez Perez","Calle con carera y numero","yosisoy@elmejor.com",31200000,fnac,fing),
+               new Docente(98648, "Luis Federico", "Sanchez Perez","Calle con carera y numero","yosisoy@elmejor.com",31200000,fnac,fing),
+               new Docente(98648, "Luis Federico", "Sanchez Perez","Calle con carera y numero","yosisoy@elmejor.com",31200000,fnac,fing),
+               new Docente(98648, "Luis Federico", "Sanchez Perez","Calle con carera y numero","yosisoy@elmejor.com",31200000,fnac,fing)
+
+            };
+            foreach (Docente d in misDocentes)
+            {
+                Console.WriteLine("--------------------------------");
+                Console.WriteLine(Docente.GetInfoDocente(d));
+            }
+            
+
                
         }
     }
