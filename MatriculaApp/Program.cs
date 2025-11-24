@@ -20,6 +20,11 @@ app.UseRouting();
 app.UseSession();
 
 app.MapControllers();
-app.MapFallbackToFile("index.html");
+
+app.MapGet("/", async context =>
+{
+    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Pages", "index.html");
+    await context.Response.SendFileAsync(filePath);
+});
 
 app.Run();

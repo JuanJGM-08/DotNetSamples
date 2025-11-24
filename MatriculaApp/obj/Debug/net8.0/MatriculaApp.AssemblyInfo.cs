@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MatriculaApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f0338061d327e13966ff2284aca4e92ba345a10")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01276a2f9fee2624950e3cbb7b90f7c6a8793cfe")]
 [assembly: System.Reflection.AssemblyProductAttribute("MatriculaApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MatriculaApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -3,85 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Matrícula - Login</title>
-    
-</head>
-<style>
-        .user-type {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        .login-container {
+            background: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            margin-top: 15px;
         }
         .user-option {
-            flex: 1;
-            border: 2px solid #ddd;
-            border-radius: 5px;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            text-align: center;
             cursor: pointer;
-            transition: all 0.3s;
-        }
-        .user-option:hover {
-            border-color: green;
         }
         .user-option.selected {
-            border-color: #007bff;
-            background-color: #e7f3ff;
-        }
-        button:hover {
-            background-color: green;
+            background: #e0e0e0;
         }
     </style>
+</head>
 <body>
     <div class="login-container">
-        <h2>Sistema de Matrícula</h2>
-        <h3>Iniciar Sesión</h3>
+        <h2>Iniciar Sesión</h2>
         
         <form method="post" action="/Login/Validar">
-            <div class="user-type">
-                <div class="user-option" onclick="selectUserType('estudiante')">
-                    <h4>Estudiante</h4>
-                </div>
-                <div class="user-option" onclick="selectUserType('docente')">
-                    <h4>Docente</h4>
-                </div>
-                <div class="user-option" onclick="selectUserType('admin')">
-                    <h4>Admin</h4>
-                </div>
+            <div>
+                <div class="user-option" onclick="selectUserType('estudiante')">Estudiante</div>
+                <div class="user-option" onclick="selectUserType('docente')">Docente</div>
+                <div class="user-option" onclick="selectUserType('admin')">Admin</div>
             </div>
 
             <input type="hidden" name="TipoUsuario" id="tipoUsuario" required>
             
             <label>Usuario:</label>
-            <input type="text" name="Username" placeholder="Ingrese su usuario" required>
-            <br>
+            <input type="text" name="Username" required>
+            
             <label>Contraseña:</label>
-            <input type="password" name="Password" placeholder="Ingrese su contraseña" required>
-            <br>
+            <input type="password" name="Password" required>
+            
             <button type="submit">Ingresar</button>
         </form>
 
-        <div class="user-info">
-            <br>
+        <div style="margin-top: 20px; padding: 10px; background: #f8f9fa;">
             <strong>Usuarios de prueba:</strong><br>
-            <strong>Admin:</strong> admin / admin123<br>
-            <strong>Docente:</strong> profesor1 / docente123<br>
-            <strong>Estudiante:</strong> estudiante1 / estudiante123
+            Admin: admin / admin123<br>
+            Docente: profesor1 / docente123<br>
+            Estudiante: estudiante1 / estudiante123
         </div>
     </div>
 
     <script>
         function selectUserType(tipo) {
             document.getElementById('tipoUsuario').value = tipo;
-            
-            document.querySelectorAll('.user-option').forEach(opt => {
+            var options = document.querySelectorAll('.user-option');
+            options.forEach(function(opt) {
                 opt.classList.remove('selected');
             });
-            
             event.currentTarget.classList.add('selected');
         }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            selectUserType('estudiante');
-        });
+        selectUserType('estudiante');
     </script>
 </body>
 </html>
